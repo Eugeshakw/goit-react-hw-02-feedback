@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { feedbacks } from 'utils/utils';
+
 import { nanoid } from 'nanoid';
 import style from './feedbackOption.module.scss'
 const FeedBackOptions = ({ onLeaveFeedback, option }) => {
