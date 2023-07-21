@@ -31,8 +31,10 @@ export class App extends React.Component {
   render() {
     return (
       <>
-        <Section tittle={'Please leave feedback'}></Section>
-        <FeedBackOptions onLeaveFeedback={this.onLeaveFeedback}></FeedBackOptions>
+        <Section tittle={'Please leave feedback'}>
+          <FeedBackOptions onLeaveFeedback={this.onLeaveFeedback}  options={Object.keys(this.state)}></FeedBackOptions>
+        </Section>
+        
 
         <Section tittle={'Statistics'}>
         {this.countTotalFeedback() === 0 ? (

@@ -1,5 +1,5 @@
 import React from "react"
-
+import PropTypes from 'prop-types';
 const Section = ({tittle, children}) => {
     return (
         <>
@@ -11,3 +11,8 @@ const Section = ({tittle, children}) => {
 
 
 export default Section;
+
+Section.propTypes={
+    tittle: PropTypes.string.isRequired,
+    
+}

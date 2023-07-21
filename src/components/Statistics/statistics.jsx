@@ -1,5 +1,7 @@
 import React from "react";
 import style from './statistics.module.scss';
+import PropTypes from 'prop-types';
+
 const Statistics = ({good, neutral, bad, total, countPercentage}) => {
     return (
         <div className={style.confeedback}>
@@ -13,3 +15,11 @@ const Statistics = ({good, neutral, bad, total, countPercentage}) => {
 }
 
 export default Statistics;
+
+Statistics.propTypes={
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired,
+
+};
