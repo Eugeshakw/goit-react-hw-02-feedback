@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { feedbacks } from 'utils/utils';
 import { nanoid } from 'nanoid';
 import style from './feedbackOption.module.scss'
-const FeedBackOptions = ({ onLeaveFeedback }) => {
+const FeedBackOptions = ({ onLeaveFeedback, option }) => {
   return (
     <div className={style.containerbtn}>
-      {Object.keys(feedbacks).map(feedback => (
+      {option.map(feedback => (
         <button
           className={style.btnfeedback}
           type="button"
@@ -24,4 +24,5 @@ export default FeedBackOptions;
 
 FeedBackOptions.propTypes ={
   onLeaveFeedback: PropTypes.func.isRequired,
+  option: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 }
