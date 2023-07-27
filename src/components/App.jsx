@@ -20,6 +20,7 @@ export class App extends React.Component {
     
     console.log('click');
   }
+  
   countTotalFeedback = () => {
     return this.state.good + this.state.neutral + this.state.bad;
   };
@@ -28,6 +29,7 @@ export class App extends React.Component {
     const total = this.countTotalFeedback();
     return total === 0 ? 0 : (this.state.good / total) * 100;
   }
+
   render() {
     return (
       <>
